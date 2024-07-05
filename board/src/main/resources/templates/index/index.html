@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="~{fragment/header :: header('INDE')}"></head>
+<body>
+<div class="index-body-area">
+  <div class="index-content-area">
+    <div th:replace="~{fragment/left-side}"></div>
+    <div class="index-right-side-area">
+        <div th:replace="~{fragment/info}"></div>
+        <div>
+            <img src="../../static/images/main2.gif" th:src="@{images/main2.gif}" class="background">
+        </div>
+    </div>
+  </div>
+</div>
+<th:block th:replace="~{fragment/footer}"></th:block>
+</body>
+</html>

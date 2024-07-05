@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+    <typeAliases>
+        <typeAlias alias="BoardDto" type="com.heoth.board.dto.BoardDto"></typeAlias>
+        <typeAlias alias="MemberDto" type="com.heoth.board.dto.MemberDto"></typeAlias>
+        <typeAlias alias="LoginDto" type="com.heoth.board.dto.LoginDto"></typeAlias>
+    </typeAliases>
+</configuration>

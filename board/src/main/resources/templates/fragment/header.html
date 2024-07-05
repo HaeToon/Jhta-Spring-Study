@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:fragment="header(title)">
+    <meta charset="UTF-8">
+    <title th:text="${title}">Title</title>
+    <link rel="icon" type="image/x-icon" href="/images/common/a.png">
+    <link rel="stylesheet" href="../../static/css/index.css" th:href="@{/css/index.css}">
+    <link rel="stylesheet" href="../../static/css/board.css" th:href="@{/css/board.css}">
+    <link rel="stylesheet" href="../../static/css/member.css" th:href="@{/css/member.css}">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="../../static/js/jquery-3.7.1.min.js" th:src="@{/js/jquery-3.7.1.min.js}"></script>
+    <script src="../../static/js/jquery.serialize-object.min.js" th:href="@{/js/jquery.serialize-object.min.js}"></script>
+</head>
+</html>

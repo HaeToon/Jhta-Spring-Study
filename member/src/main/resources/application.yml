@@ -1,0 +1,11 @@
+#spring.application.name=member
+server:
+  port: 8080
+spring:
+  application:
+    name: member
+  devtools:
+    restart:
+      enabled: true
+    livereload:
+      enabled: true

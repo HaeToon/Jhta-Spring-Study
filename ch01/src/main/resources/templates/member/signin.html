@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="/css/include/bootstrap.min.css">
+    <script src="/js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+
+<div class="container">
+    <h1>회원가입</h1>
+    <form action="/member/signin" method="post">
+        <div class="mt-3">
+            <label for="validationCustom01" class="form-label">USER ID</label>
+            <input type="text" class="form-control" id="validationCustom01" name="userId" placeholder="아이디를 써주세요">
+            <div class="" th:if="${errorMap?.containsKey('userId')}"  th:text="${errorMap['userId']}">
+                Looks good!
+            </div>
+        </div>
+        <div class="mt-3">
+            <label for="validationCustom02" class="form-label">PASSWORD</label>
+            <input type="password" class="form-control" id="validationCustom02" name="userPw" placeholder="비밀번호를 써주세요">
+            <div class="" th:if="${errorMap?.containsKey('userPw')}"   th:text="${errorMap['userPw']}">
+                Looks good!
+            </div>
+        </div>
+        <div class="mt-3">
+            <label for="validationCustom03" class="form-label">USER NAME</label>
+            <input type="text" class="form-control" id="validationCustom03" name="userName" placeholder="이름을 써주세요">
+            <div class="" th:if="${errorMap?.containsKey('userName')}"   th:text="${errorMap['userName']}">
+                Looks good!
+            </div>
+        </div>
+        <div class="mt-3">
+            <button class="btn btn-primary">회원가입</button>
+        </div>
+    </form>
+</div>
+</body>
+</html>

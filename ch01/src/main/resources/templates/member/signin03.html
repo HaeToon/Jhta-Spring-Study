@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="/css/include/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/member/sign_in.css">
+    <script src="/js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+<div class="content-area">
+    <div class="sign-in-area">
+        <h1>회원가입</h1>
+        <form action="/member/signin" method="post" th:action th:object="${member}">
+            <div class="mt-3">
+                <label class="form-label">USER ID</label>
+                <input type="text" class="form-control" th:field="*{userId}" placeholder="아이디를 써주세요">
+                <div class="invalid-feedback" th:errors="*{userId}">
+
+                    Looks good!
+                </div>
+            </div>
+            <div class="mt-3">
+                <label class="form-label">PASSWORD</label>
+                <input type="password" class="form-control" th:field="*{userPw}" placeholder="비밀번호를 써주세요">
+                <div class="invalid-feedback" th:errors="*{userPw}">
+                    Looks good!
+                </div>
+            </div>
+            <div class="mt-3">
+                <labe class="form-label">USER NAME</labe>
+                <input type="text" class="form-control" th:field="*{userName}" placeholder="이름을 써주세요">
+                <div class="invalid-feedback" th:errors="*{userName}">
+                    Looks good!
+                </div>
+            </div>
+            <div class="mt-3">
+                <labe class="form-label">USER EMAIL</labe>
+                <input type="email" class="form-control" th:field="*{userEmail}" placeholder="이메일을 써주세요">
+                <div class="invalid-feedback" th:errors="*{userEmail}">
+                    Looks good!
+                </div>
+            </div>
+            <div class="mt-3">
+                <button class="btn btn-primary">회원가입</button>
+            </div>
+        </form>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,17 @@
+#????? ??
+server:
+  servlet:
+    session:
+      timeout: 1800
+
+spring:
+  application:
+    name: board
+  profiles:
+    active: prod
+
+  devtools:
+    livereload:
+      enabled: true
+    restart:
+      enabled: true

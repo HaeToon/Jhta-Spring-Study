@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.heoth.board.dao.BoardDao">
+    <select id="boardList" resultType="BoardDto">
+        select * from board
+    </select>
+    <insert id="writeBoard" parameterType="BoardDto">
+        insert into board values (BOARD_SEQUENCE.NEXTVAL,#{title},#{content},${password},sysdate)
+    </insert>
+    <select id="viewBoardDto" resultType="BoardDto" parameterType="int">
+        select * from board where idx = #{idx}
+    </select>
+    <delete id="deleteBoard" parameterType="BoardDto">
+        delete board where idx = #{idx} and password = #{password}
+    </delete>
+</mapper>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h1 th:text="${member.getName()}"></h1>
+<dl>
+    <dt th:text="${member['name']}">감자</dt>
+    <dd th:text="${member.getAge()}">20</dd>
+</dl>
+    <hr>
+<ul>
+    <li>
+        <h2 th:text="${memberList[0].getName()}">고구마</h2>
+        <h2 th:text="${memberList[0].getAge()}">20개</h2>
+    </li>
+    <li>
+        <h2 th:text="${memberList[1].getName()}">고구마</h2>
+        <h2 th:text="${memberList[1].getAge()}">20개</h2>
+    </li>
+</ul>
+    <hr>
+    <ul>
+        <li>
+            <h2 th:text="${map['member01'].getName()}">고구마</h2>
+            <h2 th:text="${map.get('member01').getAge()}">20개</h2>
+        </li>
+        <li>
+            <h2 th:text="${map.get('member02').getName()}">고구마</h2>
+            <h2 th:text="${map.get('member02').getName()}">20개</h2>
+        </li>
+    </ul>
+<hr>
+<ul>
+    <li>
+        <a th:href="@{/test}">link</a>
+    </li>
+</ul>
+</body>
+</html>

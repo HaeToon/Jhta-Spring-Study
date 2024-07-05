@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="~{fragment/header :: header('회원정보')}"></head>
+<body>
+    <div>
+        <div>
+            <h1>이름</h1>
+            <h1 th:text="${memberDto.getUserName()}">이름</h1>
+            <h1>이메일</h1>
+            <h1 th:text="${memberDto.getUserEmail()}">이메일</h1>
+        </div>
+    </div>
+</body>
+<th:block th:replace="~{fragment/footer}"></th:block>
+</html>

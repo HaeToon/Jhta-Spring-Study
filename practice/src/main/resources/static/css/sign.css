@@ -1,0 +1,78 @@
+.login-body-area {
+    width: 100%;
+    min-height: 100vh;
+    max-height: 100%;
+    border: 1px solid #f00;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.login-area {
+    justify-content: center;
+    text-align: center;
+    width: 500px;
+    height: 300px;
+    border: 1px solid #ccc;
+    .login-area-input {
+        display: flex;
+        width: 100%;
+        height: 50px;
+        margin-top: 20px;
+        border: 1px solid #ccc;
+        .login-area-input-text {
+            display: flex; /* Flex 컨테이너로 설정 */
+            align-items: center; /* 세로 중앙 정렬 */
+            justify-content: center; /* 가로 중앙 정렬 (선택 사항) */
+            width: 100px;
+            height: 100%;
+            font-size: 18px;
+            border: 1px solid #ccc;
+        }
+        .login-area-input-box {
+            width: calc(100% - 100px);
+            height: 100%;
+            border: 1px solid #ccc;
+            input {
+                width: calc(100% - 6px);
+                height: calc(100% - 6px);
+                font-size: 28px;
+            }
+        }
+    }
+
+    .login-area-bottom {
+        display: flex;
+        margin-top: 20px;
+        width: 100%;
+        height: 50px;
+        border: 1px solid #ccc;
+        .login-btn {
+            width: 50%;
+            height: 100%;
+            button {
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+}
+.sign-up-btn {
+    width: 50%;
+    height: 100%;
+    position: relative;
+}
+.sign-up-btn a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    line-height: 50px; /* 부모 요소의 높이와 동일하게 설정 */
+    text-align: center; /* 텍스트를 가운데 정렬 */
+    text-decoration: none; /* 밑줄 제거 */
+    color: inherit; /* 부모의 텍스트 색상 상속 */
+    background-color: rgba(204, 204, 204, 0.38);
+    border:1px solid #c4c3c3;
+}
+.sign-up-btn a:hover {
+    background-color: #ccc;
+    transition: 0.3s;
+}

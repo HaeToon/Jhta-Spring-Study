@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: ch01
+  devtools:
+    restart:
+      enabled: true
+  livereload:
+    enabled: true
+#  mvc:
+#    view:
+#      prefix: /WEB-INF/views/
+#      suffix: .jsp

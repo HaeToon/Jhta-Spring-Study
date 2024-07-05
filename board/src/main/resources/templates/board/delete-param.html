@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+    <link rel="stylesheet" href="../../static/css/index.css" th:href="@{/css/index.css}">
+    <link rel="stylesheet" href="../../static/css/board.css" th:href="@{/css/board.css}">
+</head>
+<body>
+<div class="index-body-area">
+    <div class="index-content-area">
+        <div class="index-left-side-area">
+            <div class="index-left-side-logo">
+                <a href="/" th:href="@{/}"><img src="../../static/images/logo-sample.png"
+                                                th:src="@{/images/logo-sample.png}" class="logo"></a>
+            </div>
+            <div class="index-left-side-menu">
+                <ul>
+                    <li class="index-left-side-area-li">
+                        <a href="/board">board</a>
+                    </li>
+                    <li class="index-left-side-area-li">
+                        <a href="/board">board</a>
+                    </li>
+                    <li class="index-left-side-area-li">
+                        <a href="/board">board</a>
+                    </li>
+                    <li class="index-left-side-area-li">
+                        <a href="/board">board</a>
+                    </li>
+                    <li class="index-left-side-area-li">
+                        <a href="/board">board</a>
+                    </li>
+                    <li class="index-left-side-area-li">
+                        <a href="/board">board</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="index-right-side-area">
+            <div th:replace="~{fragment/info}"></div>
+            <div>
+                <img src="../../static/images/boardWriteBackground.png" th:src="@{/images/boardWriteBackground.png}"
+                     class="background">
+            </div>
+            <div class="board-write-area">
+                <form action="/board/write" method="post" th:action="@{/board/delete}" class="board-write-form">
+                   <input type="hidden" name="idx" value="" th:value="${param.idx}">
+                    <div class="board-write-line">
+                        <div class="board-write-input-text">
+                            <label>비밀번호</label>
+                        </div>
+                        <div class="board-write-input-box">
+                            <input type="password" name="password" class="board-write-input-box"
+                                   placeholder="비밀번호">
+                        </div>
+                    </div>
+                    <button class="">삭제하기</button>
+                    <a href="" th:href="@{/board}">목록으로</a>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

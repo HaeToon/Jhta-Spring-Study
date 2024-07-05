@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>title</title>
+</head>
+<body>
+    <h1 th:text="${name}">hello Spring</h1>
+    <h2>내용을 직접 뿌리기 = [[${data}]]</h2>
+    <!--utext 는 태그없앰-->
+    <p th:utext="${data02}">hello Spring</p>
+    <p>내용을 직접 뿌리기2 = [(${data})]</p>
+<a href="#" th:href="@{/list(userID=${member[0]},userPW=${member[1]},userName=${member[2]},userAge=${member[3]})}">링크</a>
+</body>
+</html>

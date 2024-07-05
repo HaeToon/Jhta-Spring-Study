@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="../../css/member/info.css">
+</head>
+<body>
+<div class="body-area">
+    <div class="info-title">
+        <h1>회원정보</h1>
+        <div class="info-title-top-end">
+            <a href="">아이디/비밀번호</a>
+        </div>
+        <div class="info-title-logo">
+            <h2>로고</h2>
+        </div>
+    </div>
+    <div class="content-area">
+        <div class="content-center">
+            <div class="content-left-area">
+                <h1 class="left">왼쪽영역</h1>
+            </div>
+            <th:block th:if="${status}">
+                <div class="content-center-area">
+                    <table class="member-info">
+                        <thead>
+                            <tr>
+                                <th>userID</th>
+                                <th>userPW</th>
+                                <th>userName</th>
+                                <th>userEmail</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td th:text="${infoMember.getUserId()}">userID</td>
+                                <td th:text="${infoMember.getUserPw()}">userPW</td>
+                                <td th:text="${infoMember.getUserName()}">userName</td>
+                                <td th:text="${infoMember.getUserEmail()}">userEmail</td>
+                            </tr>
+                            <tr>
+                                <td th:text="${infoMember.getUserId()}">userID</td>
+                                <td th:text="${infoMember.getUserPw()}">userPW</td>
+                                <td th:text="${infoMember.getUserName()}">userName</td>
+                                <td th:text="${infoMember.getUserEmail()}">userEmail</td>
+                            </tr>
+                            <tr>
+                                <td th:text="${infoMember.getUserId()}">userID</td>
+                                <td th:text="${infoMember.getUserPw()}">userPW</td>
+                                <td th:text="${infoMember.getUserName()}">userName</td>
+                                <td th:text="${infoMember.getUserEmail()}">userEmail</td>
+                            </tr>
+                            <tr>
+                                <td th:text="${infoMember.getUserId()}">userID</td>
+                                <td th:text="${infoMember.getUserPw()}">userPW</td>
+                                <td th:text="${infoMember.getUserName()}">userName</td>
+                                <td th:text="${infoMember.getUserEmail()}">userEmail</td>
+                            </tr>
+                            <tr>
+                                <td th:text="${infoMember.getUserId()}">userID</td>
+                                <td th:text="${infoMember.getUserPw()}">userPW</td>
+                                <td th:text="${infoMember.getUserName()}">userName</td>
+                                <td th:text="${infoMember.getUserEmail()}">userEmail</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </th:block>
+            <div class="content-right-area">
+                <h1>오른쪽</h1>
+            </div>
+        </div>
+        <div class="content-bottom-area">
+            <h1>아래쪽</h1>
+        </div>
+    </div>
+</div>
+</body>
+</html>

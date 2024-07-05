@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h1>member List</h1>
+<ul>
+    <li th:each="member : ${members}">
+        <a href="" th:href="@{/member/info/{param}(param=${member.idx})}" th:text="${member.idx}" >01</a>
+        <a href="" th:href="@{/member/info/{param}(param=${member.idx})}" th:text="${member.userId}">아이디</a>
+        <span th:text="${member.userName}">이름</span>
+    </li>
+</ul>
+<a href="member/signin">회원가입</a>
+</body>
+</html>

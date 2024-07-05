@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="~{fragment/header :: header('BOARD')}"></head>
+<body>
+<div class="index-body-area">
+    <div class="index-content-area">
+        <div th:replace="~{fragment/left-side}"></div>
+        <div class="index-right-side-area">
+            <img src="../../static/images/boardBackground.jpg" th:src="@{/images/boardBackground.jpg}"
+                 class="background">
+            <div th:replace="~{fragment/info}"></div>
+            <div class="board-list-area">
+                <div class="board-list-title">
+                    <h1>board List</h1>
+                </div>
+                <div class="board-list-table-area">
+                    <table class="board-list">
+                        <thead>
+                        <tr>
+                            <th>글번호</th>
+                            <th>글제목</th>
+                            <th>작성일</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr th:each="board : ${boardList}">
+                            <td th:text="${board.getIdx()}"></td>
+                            <td><a href="" th:text="${board.getTitle()}"
+                                   th:href="@{/board/view/{idx}(idx=${board.getIdx()})}"></a></td>
+                            <td th:text="${board.getRegdate()}"></td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    <a href="/board/write" class="board-write-btn"> write </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    <th:block th:replace="~{fragment/footer}"></th:block>
+</body>
+</html>

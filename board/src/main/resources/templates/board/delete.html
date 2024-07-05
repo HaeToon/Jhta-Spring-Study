@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="~{fragment/header}"></head>
+<body>
+<div class="index-body-area">
+    <div class="index-content-area">
+        <div th:replace="~{fragment/left-side}"></div>
+        <div class="index-right-side-area">
+            <div th:replace="~{fragment/info}"></div>
+            <div>
+                <img src="../../static/images/boardWriteBackground.png" th:src="@{/images/boardWriteBackground.png}"
+                     class="background">
+            </div>
+            <div class="board-write-area">
+                <form action="/board/write" method="post" th:action="@{/board/delete}" class="board-write-form">
+                   <input type="hidden" name="idx" value="1" th:value="__${idx}__">
+                    <div class="board-write-line">
+                        <div class="board-write-input-text">
+                            <label>비밀번호</label>
+                        </div>
+                        <div class="board-write-input-box">
+                            <input type="password" name="password" class="board-write-input-box"
+                                   placeholder="비밀번호">
+                        </div>
+                    </div>
+                    <button class="">삭제하기</button>
+                    <a href="" th:href="@{/board}">목록으로</a>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<th:block th:replace="~{fragment/footer}"></th:block>
+</body>
+</html>

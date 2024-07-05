@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<th:block th:if="${alertDto!=null}">
+    <script th:inline="javascript">
+        const title= [[${alertDto.title}]];
+        const text = [[${alertDto.text}]]
+        const icon = [[${alertDto.icon}]]
+        Swal.fire({
+            title:title,
+            text:text,
+            icon:icon,
+        });
+    </script>
+</th:block>
+</html>

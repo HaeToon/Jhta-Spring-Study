@@ -1,0 +1,11 @@
+<div class="index-right-side-info-area">
+    <img src="../../static/images/loginIcon.png" th:src="@{/images/loginIcon.png}" class="login-icon">
+    <div class="info-area" th:if="${session.userName}">
+    <a href="/member/info" th:href="@{/member/info}" th:text="${session.userName}">이름</a>
+    <a href="/member/logout">로그아웃</a>
+    </div>
+    <div class="info-area" th:unless="${session.userName}">
+        <a href="/member/signIn">로그인</a>
+        <a href="/member/signUp">회원가입</a>
+    </div>
+</div>

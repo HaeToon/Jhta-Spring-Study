@@ -1,0 +1,14 @@
+server:
+  port: 8080
+spring:
+  devtools:
+    livereload:
+     enabled: true
+    restart:
+     enabled: true
+#  mvc:
+#    view:
+#      prefix: template 주소 바꾸기
+#       suffix:.html
+
+

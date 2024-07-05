@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="~{fragment/header :: header('WRITE')}"></head>
+<body>
+<div class="index-body-area">
+    <div class="index-content-area">
+        <div th:replace="~{fragment/left-side}"></div>
+        <div class="index-right-side-area">
+            <div th:replace="~{fragment/info}"></div>
+            <div>
+                <img src="../../static/images/boardWriteBackground.png" th:src="@{/images/boardWriteBackground.png}"
+                     class="background">
+            </div>
+            <div class="board-write-area">
+                <form action="/board/write" method="post" th:action="@{/board/write}" th:object="${boardDto}" class="board-write-form">
+                    <div class="board-write-line">
+                        <div class="board-write-input-text">
+                            <label>제목</label>
+                        </div>
+                        <div class="board-write-input-box">
+                            <input type="text" class="board-write-input-box" th:field="*{title}" placeholder="제목">
+                            <div class="invalid-feedback" th:errors="*{title}">
+                                good job
+                            </div>
+                        </div>
+                    </div>
+                    <div class="board-write-line-textbox">
+                        <div class="board-write-input-text">
+                            <label>내용</label>
+                        </div>
+                        <div class="board-write-input-box">
+                            <input type="text" class="board-write-input-textbox" th:field="*{content}" placeholder="">
+                            <div class="invalid-feedback" th:errors="*{content}">
+                                good job
+                            </div>
+                        </div>
+                    </div>
+                    <div class="board-write-line">
+                        <div class="board-write-input-text">
+                            <label>비밀번호</label>
+                        </div>
+                        <div class="board-write-input-box">
+                            <input type="password" class="board-write-input-box" th:field="*{password}"
+                                   placeholder="비밀번호">
+                            <div class="invalid-feedback" th:errors="*{password}">
+                                good job
+                            </div>
+                        </div>
+                    </div>
+                    <button class="board-write-btn">write</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

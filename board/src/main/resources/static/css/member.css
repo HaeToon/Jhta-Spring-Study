@@ -1,0 +1,146 @@
+.member-sign-in-form {
+    width: 100%;
+    height: 100%;
+}
+
+.member-sign-in-box {
+    position: relative;
+    flex-direction: column;
+    height: 100vh;
+
+    .member-sign-in-top {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .sign-in-img {
+            width: 50%;
+            height: 100%;
+        }
+    }
+
+    .member-sign-in-middle {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 50%
+    }
+
+    .member-sign-in-bottom {
+        width: 100%;
+        height: 20%
+    }
+}
+
+.member-sign-in-title {
+    display: flex;
+    justify-content: center;
+}
+
+.member-sign-in-area {
+    margin-top: 50px;
+    background-color: #f1b2b2;
+    display: flex;
+    width: 400px;
+    height: 300px;
+    border: 3px solid #ee7171;
+    border-radius: 40px;
+    justify-content: center;
+    padding: 30px;
+}
+
+.member-sign-in-line {
+    display: flex;
+    width: 100%;
+    height: 50px;
+    margin-bottom: 20px;
+}
+
+.member-sign-in-input-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80px;
+    height: 50px;
+    margin-right: 20px;
+    font-size: 18px;
+}
+
+.member-sign-in-input-box {
+    display: flex;
+    width: 100px;
+    height: 50px;
+
+    input {
+        font-size: 20px;
+    }
+}
+
+.member-sign-in-footer {
+    display: flex;
+    margin-top: 20px;
+    width: 100%;
+    height: 50px;
+    border: 1px solid #ccc;
+
+    .login-btn {
+        width: 50%;
+        height: 100%;
+
+        button {
+            width: 100%;
+            height: 100%;
+        }
+    }
+}
+
+.sign-up-btn {
+    width: 50%;
+    height: 100%;
+    position: relative;
+}
+
+.sign-up-btn a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    line-height: 50px; /* 부모 요소의 높이와 동일하게 설정 */
+    text-align: center; /* 텍스트를 가운데 정렬 */
+    text-decoration: none; /* 밑줄 제거 */
+    color: inherit; /* 부모의 텍스트 색상 상속 */
+    background-color: #b29595;
+    border: 1px solid #c4c3c3;
+}
+
+.sign-up-btn a:hover {
+    background-color: #ccc;
+    transition: 0.3s;
+}
+
+.sign-up-background {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    z-index: -1;
+}
+.sign-in-background {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    z-index: -1;
+}
+
+.sign-up-area {
+    width: 400px;
+    height: 300px;
+    padding:30px;
+    border:3px solid #faee4f;
+    background-color: #fcf0f0;
+    border-radius: 20px;
+    margin-bottom: calc(100% - 120px);
+    .sign-up-area-title{
+        display: flex;
+        justify-content: center;
+    }
+}

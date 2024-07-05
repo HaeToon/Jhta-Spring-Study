@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="~{fragment/header :: header('VIEW')}"></head>
+<body>
+<div class="index-body-area">
+    <div class="index-content-area">
+        <div th:replace="~{fragment/left-side}"></div>
+        <div class="index-right-side-area">
+            <img src="../../static/images/viewBackground.jpg" th:src="@{/images/viewBackground.jpg}"
+                 class="background">
+            <div th:replace="~{fragment/info}"></div>
+            <div class="view-area">
+                <div class="view-line">
+                    <div class="view-line-text">
+                        <th>글번호</th>
+                    </div>
+                    <div class="view-line-content">
+                        <td th:text="${viewBoardDto.getIdx()}"></td>
+                    </div>
+                </div>
+                <div class="view-line">
+                    <div class="view-line-text">
+                        <th>제목</th>
+                    </div>
+                    <td th:text="${viewBoardDto.getTitle()}"></td>
+                </div>
+                <div class="view-content">
+                    <div class="view-content-text">
+                        <th>내용</th>
+                    </div>
+                    <td th:text="${viewBoardDto.getContent()}"></td>
+                </div>
+                <a href="" th:href="@{/board/delete/{idx}(idx=${viewBoardDto.getIdx()})}">delete /{idx}</a>
+                <a href="" th:href="@{/board/delete(idx=${viewBoardDto.getIdx()})}">delete ?idx</a>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
+
